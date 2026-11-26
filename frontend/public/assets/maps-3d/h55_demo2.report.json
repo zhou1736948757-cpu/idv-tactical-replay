@@ -1,0 +1,59 @@
+{
+  "mapId": "h55_demo2",
+  "nameZh": "红教堂（夜）",
+  "sourceFile": "h55_demo2.runtime-f783402738982930.html",
+  "sourceHtmlBytes": 28186215,
+  "rawGlbBytes": 15941764,
+  "rawGlbGzipBytes": 8260380,
+  "optimizedGlbBytes": 2459540,
+  "optimizedGlbGzipBytes": 1631277,
+  "navGlbBytes": 37516,
+  "sizeReductionVsHtmlPct": 91.3,
+  "sizeReductionVsGlbPct": 84.6,
+  "gzipReductionVsGlbPct": 80.3,
+  "texBeforeBytes": 2718994,
+  "texAfterBytes": 227192,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 19,
+    "prop": 79,
+    "arch": 56
+  },
+  "before": {
+    "nodes": 3057,
+    "meshes": 154,
+    "materials": 214,
+    "textures": 42,
+    "uniqueVerts": 310931,
+    "uniqueTris": 169248,
+    "drawCalls": 3436,
+    "renderedTris": 917293,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 114,
+    "meshes": 114,
+    "materials": 39,
+    "textures": 37,
+    "uniqueVerts": 147887,
+    "uniqueTris": 98018,
+    "drawCalls": 159,
+    "renderedTris": 514560,
+    "instancedNodes": 102
+  },
+  "drawCallReductionPct": 95.4,
+  "triReductionPct": 43.9,
+  "elapsedMs": 1277,
+  "webgl": {
+    "calls": 197,
+    "triangles": 551438,
+    "geometries": 156,
+    "textures": 38,
+    "size": [
+      2875.7,
+      1062.4,
+      2463.4
+    ],
+    "errors": []
+  }
+}

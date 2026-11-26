@@ -1,0 +1,40 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    restart: unless-stopped
+    environment:
+      IDV_ENV: ${IDV_ENV:-production}
+      IDV_CACHE_DIR: /data/cache
+      IDV_TMP_DIR: /data/tmp
+      IDV_MAX_UPLOAD_BYTES: ${IDV_MAX_UPLOAD_BYTES:-268435456}
+      IDV_MAX_MATCHES_PER_UPLOAD: ${IDV_MAX_MATCHES_PER_UPLOAD:-5}
+      IDV_MAX_CONCURRENT_EXTRACTS: ${IDV_MAX_CONCURRENT_EXTRACTS:-2}
+      IDV_MAX_UPLOADED_MATCHES: ${IDV_MAX_UPLOADED_MATCHES:-500}
+      IDV_PUBLIC_UPLOADS: ${IDV_PUBLIC_UPLOADS:-0}
+      IDV_REDACT_UID: ${IDV_REDACT_UID:-1}
+      IDV_DISABLE_DOCS: ${IDV_DISABLE_DOCS:-1}
+      IDV_CORS_ORIGINS: ${IDV_CORS_ORIGINS:-}
+    volumes:
+      - idv_cache:/data/cache
+      - idv_tmp:/data/tmp
+    expose:
+      - "8000"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        VITE_API_BASE: ${VITE_API_BASE:-/api}
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${HTTP_PORT:-80}:80"
+
+volumes:
+  idv_cache:
+  idv_tmp:

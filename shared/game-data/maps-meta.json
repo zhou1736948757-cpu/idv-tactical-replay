@@ -1,0 +1,298 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "庄园战术复盘档案（IDV Tactical Replay）全栈共享地图元数据源：统一维护 9 张竞赛战术地图、原生回放 scene_id 映射、2D 底图配准参数、导航网格与 3D GLB 场景标识。",
+  "worldUnitsPerMeter": 11.842105263157896,
+  "tacticalMaps": [
+    {
+      "mapId": 0,
+      "key": "armsFactory",
+      "nameZh": "军工厂",
+      "nameEn": "Arms Factory",
+      "replaySceneIds": [6],
+      "aspectRatio": 1.1441,
+      "mapSize": [750, 644],
+      "widthM": 166.2,
+      "mapImage": "/assets/maps/军工厂_grid.jpg",
+      "gridPlacement": {
+        "minX": 25.8,
+        "maxX": 705.4,
+        "minY": 29.7,
+        "maxY": 622.3,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.1441
+      },
+      "navGrid": {
+        "file": "ArmsFactory.png",
+        "url": "/assets/nav-grid/ArmsFactory.png",
+        "metersPerCell": 0.2216
+      },
+      "scene3d": {
+        "primary": "ordnance_factory1",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/ordnance_factory1.glb",
+        "navGlbUrl": "/assets/maps-3d/ordnance_factory1.nav.glb"
+      }
+    },
+    {
+      "mapId": 1,
+      "key": "sacredHeartHospital",
+      "nameZh": "圣心医院",
+      "nameEn": "Sacred Heart Hospital",
+      "replaySceneIds": [18],
+      "aspectRatio": 1.0795,
+      "mapSize": [644, 604],
+      "widthM": 151.5,
+      "mapImage": "/assets/maps/圣心医院_grid.jpg",
+      "gridPlacement": {
+        "minX": 65.4,
+        "maxX": 624.7,
+        "minY": 15.8,
+        "maxY": 542.6,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.0795
+      },
+      "navGrid": {
+        "file": "SacredHeartHospital.png",
+        "url": "/assets/nav-grid/SacredHeartHospital.png",
+        "metersPerCell": 0.2352
+      },
+      "scene3d": {
+        "primary": "h55_hospital2",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/h55_hospital2.glb",
+        "navGlbUrl": "/assets/maps-3d/h55_hospital2.nav.glb"
+      }
+    },
+    {
+      "mapId": 2,
+      "key": "theRedChurch",
+      "nameZh": "红教堂",
+      "nameEn": "The Red Church",
+      "replaySceneIds": [11, 31],
+      "aspectRatio": 1.062,
+      "mapSize": [596, 599],
+      "widthM": 153.5,
+      "mapImage": "/assets/maps/红教堂_grid.jpg",
+      "gridPlacement": {
+        "minX": 71.4,
+        "maxX": 564.5,
+        "minY": 68.3,
+        "maxY": 528.9,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.062
+      },
+      "navGrid": {
+        "file": "TheRedChurch.png",
+        "url": "/assets/nav-grid/TheRedChurch.png",
+        "metersPerCell": 0.2576
+      },
+      "scene3d": {
+        "primary": "h55_demo",
+        "night": "h55_demo2",
+        "glbUrl": "/assets/maps-3d/h55_demo.glb",
+        "navGlbUrl": "/assets/maps-3d/h55_demo.nav.glb",
+        "nightGlbUrl": "/assets/maps-3d/h55_demo2.glb",
+        "nightNavGlbUrl": "/assets/maps-3d/h55_demo2.nav.glb"
+      }
+    },
+    {
+      "mapId": 3,
+      "key": "lakesideVillage",
+      "nameZh": "湖景村",
+      "nameEn": "Lakeside Village",
+      "replaySceneIds": [19, 55],
+      "aspectRatio": 1.1603,
+      "mapSize": [1280, 1208],
+      "widthM": 199.1,
+      "mapImage": "/assets/maps/湖景村_grid.jpg",
+      "gridPlacement": {
+        "minX": 152.1,
+        "maxX": 1132.2,
+        "minY": 200.5,
+        "maxY": 1046.5,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.1603
+      },
+      "navGrid": {
+        "file": "LakesideVillage.png",
+        "url": "/assets/nav-grid/LakesideVillage.png",
+        "metersPerCell": 0.1555
+      },
+      "scene3d": {
+        "primary": "h55_fishingvillage",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/h55_fishingvillage.glb",
+        "navGlbUrl": "/assets/maps-3d/h55_fishingvillage.nav.glb"
+      }
+    },
+    {
+      "mapId": 4,
+      "key": "moonlitRiverPark",
+      "nameZh": "月亮河公园",
+      "nameEn": "Moonlit River Park",
+      "replaySceneIds": [30, 57],
+      "aspectRatio": 1.7179,
+      "mapSize": [1492, 1028],
+      "widthM": 184.4,
+      "mapImage": "/assets/maps/月亮河公园_grid.jpg",
+      "gridPlacement": {
+        "minX": 12.2,
+        "maxX": 1471.4,
+        "minY": 89.0,
+        "maxY": 936.3,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.7179
+      },
+      "navGrid": {
+        "file": "MoonlitRiverPark.png",
+        "url": "/assets/nav-grid/MoonlitRiverPark.png",
+        "metersPerCell": 0.1236
+      },
+      "scene3d": {
+        "primary": "h55_playground",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/h55_playground.glb",
+        "navGlbUrl": "/assets/maps-3d/h55_playground.nav.glb"
+      }
+    },
+    {
+      "mapId": 5,
+      "key": "leosMemory",
+      "nameZh": "里奥的回忆",
+      "nameEn": "Leo's Memory",
+      "replaySceneIds": [33, 54],
+      "aspectRatio": 1.1381,
+      "mapSize": [750, 635],
+      "widthM": 168.6,
+      "mapImage": "/assets/maps/里奥的回忆_grid.jpg",
+      "gridPlacement": {
+        "minX": 38.8,
+        "maxX": 706.0,
+        "minY": 28.5,
+        "maxY": 612.8,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.1381
+      },
+      "navGrid": {
+        "file": "LeosMemory.png",
+        "url": "/assets/nav-grid/LeosMemory.png",
+        "metersPerCell": 0.2248
+      },
+      "scene3d": {
+        "primary": "ordnance_factory2",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/ordnance_factory2.glb",
+        "navGlbUrl": "/assets/maps-3d/ordnance_factory2.nav.glb"
+      }
+    },
+    {
+      "mapId": 6,
+      "key": "eversleepingTown",
+      "nameZh": "永眠镇",
+      "nameEn": "Eversleeping Town",
+      "replaySceneIds": [39, 60],
+      "aspectRatio": 1.3076,
+      "mapSize": [750, 874],
+      "widthM": 137.0,
+      "mapImage": "/assets/maps/永眠镇_grid.jpg",
+      "gridPlacement": {
+        "minX": 88.9,
+        "maxX": 708.4,
+        "minY": 29.1,
+        "maxY": 847.2,
+        "rotationQuadrants": 1,
+        "aspectRatio": 1.3076
+      },
+      "navGrid": {
+        "file": "EversleepingTown.png",
+        "url": "/assets/nav-grid/EversleepingTown.png",
+        "metersPerCell": 0.1827
+      },
+      "scene3d": {
+        "primary": "h55_sleepingtown3",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/h55_sleepingtown3.glb",
+        "navGlbUrl": "/assets/maps-3d/h55_sleepingtown3.nav.glb"
+      }
+    },
+    {
+      "mapId": 7,
+      "key": "chinaTown",
+      "nameZh": "唐人街",
+      "nameEn": "China Town",
+      "replaySceneIds": [40],
+      "aspectRatio": 1.1493,
+      "mapSize": [1345, 1152],
+      "widthM": 144.1,
+      "mapImage": "/assets/maps/唐人街_grid.jpg",
+      "gridPlacement": {
+        "minX": 80.6,
+        "maxX": 1303.0,
+        "minY": 38.0,
+        "maxY": 1104.8,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.1493
+      },
+      "navGrid": {
+        "file": "ChinaTown.png",
+        "url": "/assets/nav-grid/ChinaTown.png",
+        "metersPerCell": 0.1071
+      },
+      "scene3d": {
+        "primary": "h55_chinatown",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/h55_chinatown.glb",
+        "navGlbUrl": "/assets/maps-3d/h55_chinatown.nav.glb"
+      }
+    },
+    {
+      "mapId": 8,
+      "key": "darkwoods",
+      "nameZh": "不归林",
+      "nameEn": "Darkwoods",
+      "replaySceneIds": [75],
+      "aspectRatio": 1.0322,
+      "mapSize": [1247, 1265],
+      "widthM": 133.8,
+      "mapImage": "/assets/maps/不归林_grid.jpg",
+      "gridPlacement": {
+        "minX": 39.5,
+        "maxX": 1221.5,
+        "minY": 39.3,
+        "maxY": 1186.3,
+        "rotationQuadrants": 0,
+        "aspectRatio": 1.0322
+      },
+      "navGrid": {
+        "file": "Darkwoods.png",
+        "url": "/assets/nav-grid/Darkwoods.png",
+        "metersPerCell": 0.1073
+      },
+      "scene3d": {
+        "primary": "h55_deadforest_sp",
+        "night": null,
+        "glbUrl": "/assets/maps-3d/h55_deadforest_sp.glb",
+        "navGlbUrl": "/assets/maps-3d/h55_deadforest_sp.nav.glb"
+      }
+    }
+  ],
+  "replaySceneIdMap": {
+    "6": "军工厂",
+    "11": "红教堂",
+    "18": "圣心医院",
+    "19": "湖景村",
+    "30": "月亮河公园",
+    "31": "红教堂(夜)",
+    "32": "白沙街疯人院",
+    "33": "里奥的回忆",
+    "37": "闪金石窟",
+    "39": "永眠镇",
+    "40": "唐人街",
+    "54": "里奥的回忆",
+    "55": "湖景村",
+    "57": "月亮河公园",
+    "60": "永眠镇",
+    "61": "克雷伯格赛马场",
+    "75": "不归林"
+  }
+}

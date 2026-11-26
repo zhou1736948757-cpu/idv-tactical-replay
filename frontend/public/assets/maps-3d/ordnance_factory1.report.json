@@ -1,0 +1,59 @@
+{
+  "mapId": "ordnance_factory1",
+  "nameZh": "军工厂",
+  "sourceFile": "ordnance_factory1.runtime-3e1c87b5ea19ff3e.html",
+  "sourceHtmlBytes": 31222046,
+  "rawGlbBytes": 15234688,
+  "rawGlbGzipBytes": 8004104,
+  "optimizedGlbBytes": 2058416,
+  "optimizedGlbGzipBytes": 1351628,
+  "navGlbBytes": 121784,
+  "sizeReductionVsHtmlPct": 93.4,
+  "sizeReductionVsGlbPct": 86.5,
+  "gzipReductionVsGlbPct": 83.1,
+  "texBeforeBytes": 4058318,
+  "texAfterBytes": 224206,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 14,
+    "prop": 106,
+    "arch": 35
+  },
+  "before": {
+    "nodes": 3835,
+    "meshes": 156,
+    "materials": 199,
+    "textures": 53,
+    "uniqueVerts": 203375,
+    "uniqueTris": 125391,
+    "drawCalls": 4156,
+    "renderedTris": 882896,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 112,
+    "meshes": 112,
+    "materials": 49,
+    "textures": 46,
+    "uniqueVerts": 93440,
+    "uniqueTris": 65403,
+    "drawCalls": 141,
+    "renderedTris": 444399,
+    "instancedNodes": 94
+  },
+  "drawCallReductionPct": 96.6,
+  "triReductionPct": 49.7,
+  "elapsedMs": 1231,
+  "webgl": {
+    "calls": 175,
+    "triangles": 480818,
+    "geometries": 139,
+    "textures": 47,
+    "size": [
+      2513.9,
+      547.1,
+      2685.6
+    ],
+    "errors": []
+  }
+}

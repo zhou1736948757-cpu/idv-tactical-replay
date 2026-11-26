@@ -1,0 +1,433 @@
+:root {
+  --bg: #111722;
+  --surface-1: #161e2b;
+  --surface-2: #1c2636;
+  --surface-3: #2b241c;
+  --text: #f0e6d2;
+  --muted: #b9ab8f;
+  --dim: #b9aa91;
+  --gold: #d8b36a;
+  --gold-d: #a88a52;
+  --line: rgba(216, 179, 106, .16);
+  --line2: rgba(216, 179, 106, .32);
+  --red-l: #d0606e;
+  --blue: #8fb0dc;
+  --ok: #5fc9a0;
+  --hud-glass: rgba(18, 15, 12, .80);
+  --paper: #ebe0c8;
+  --paper-2: #e1d2b3;
+  --paper-edge: #c7b48e;
+  --ink: #241b13;
+  --ink-muted: #5a4835;
+  --ink-red: #8e2733;
+  --ink-blue: #2f547e;
+  --ribbon-bg: linear-gradient(100deg, #3b2615 0%, #563921 56%, #442d1a 100%);
+  --ribbon-ink: #fff5e0;
+  --wax-win: #76212e;
+  --wax-lose: #244264;
+  --wax-ink: #fff1db;
+  --shadow-1: 0 8px 24px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(240, 230, 210, .04);
+  --font-cjk: "IDV Custom Display", "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --font-latin: "Cinzel", "Cormorant Garamond", "Noto Serif SC", serif;
+  --font-num: "Cormorant Garamond", "Noto Serif SC", serif;
+  --font-hand: "LXGW WenKai Screen", "LXGW WenKai", "Noto Serif SC", serif;
+  --serif: var(--font-cjk);
+  --hand: var(--font-hand);
+  --f-body: 14px;
+  --f-sm: 12px;
+  --f-h3: 16px;
+  --f-h2: 22px;
+  --f-h1: 28px;
+  --right-col-w: 32vw;
+  --desk-strip-w: 5vw;
+  --folio-gap: 10px;
+  --folio-foot: 0px;
+  --paper-stock: radial-gradient(ellipse at 26% 12%, #fff3d338, transparent 65%), url('/assets/dossier/parchment-tile.png') center / 420px #eddbbc;
+  --paper-frame-border: #9e7b4b;
+  --paper-stack-shadow:
+    inset 0 1px 0 rgba(255, 250, 236, 0.72),
+    2px 2px 0 #dfd0b2,
+    3px 3px 0 rgba(104, 72, 36, 0.48),
+    5px 5px 0 #d1bf9c,
+    6px 6px 0 rgba(82, 54, 24, 0.52),
+    0 14px 32px rgba(0, 0, 0, 0.50);
+  --paper-inset-frame:
+    linear-gradient(90deg, rgba(152, 114, 62, 0.44), rgba(152, 114, 62, 0.44)) 7px 7px / calc(100% - 14px) 1px no-repeat,
+    linear-gradient(90deg, rgba(152, 114, 62, 0.44), rgba(152, 114, 62, 0.44)) 7px calc(100% - 7px) / calc(100% - 14px) 1px no-repeat,
+    linear-gradient(180deg, rgba(152, 114, 62, 0.44), rgba(152, 114, 62, 0.44)) 7px 7px / 1px calc(100% - 14px) no-repeat,
+    linear-gradient(180deg, rgba(152, 114, 62, 0.44), rgba(152, 114, 62, 0.44)) calc(100% - 7px) 7px / 1px calc(100% - 14px) no-repeat,
+    radial-gradient(ellipse at 50% 42%, rgba(255, 249, 235, 0.36) 42%, rgba(146, 102, 48, 0.18) 100%);
+  --brass-rail: linear-gradient(158deg, #f3d79e, #ba8e4e 52%, #765028);
+  --wood-frame-grain: repeating-linear-gradient(123deg, #291b12, #51351f 3px, #3c2719 5px, #6b4527 8px);
+  --ribbon-metal: linear-gradient(100deg, #3b2615 0%, #563921 56%, #442d1a 100%);
+  --chevron-gold: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMTAgNiI+PHBhdGggZD0iTTEuMiAxLjFoNy42TDUgNS4zWiIgZmlsbD0iI2RmYzA4NCIvPjwvc3ZnPg==");
+  --chevron-bronze: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgMTAgNiI+PHBhdGggZD0iTTEuMiAxLjFoNy42TDUgNS4zWiIgZmlsbD0iIzVhM2IxYyIvPjwvc3ZnPg==");
+  --check-dark: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj48cGF0aCBkPSJNMi4yIDYuMiA0LjggOC44IDkuOCAzLjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI0MTUwYyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=");
+  --check-light: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj48cGF0aCBkPSJNMi4yIDYuMiA0LjggOC44IDkuOCAzLjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZjRkYyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=");
+  --stage-gutter: 10px;
+}
+
+@media (min-width: 1440px) {
+  :root { --stage-gutter: 12px; }
+}
+
+@media (min-width: 1600px) {
+  :root { --stage-gutter: 16px; }
+}
+
+body {
+  font: 500 var(--f-body)/1.6 var(--font-cjk);
+  font-feature-settings: "kern" 1;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-cjk);
+}
+
+.k {
+  font-family: var(--font-cjk);
+  font-size: var(--f-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.num {
+  font-family: var(--font-num);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* True Chancery italic Cormorant Garamond: suppress synthetic slant */
+.archive-brand small,
+#bar #steps small,
+.ribbon-h small,
+.bookmark small,
+.pil-case-title em,
+.card-copy em,
+#dropZone header em,
+.drop-well em,
+.heading-sub em {
+  font-synthesis-style: none;
+}
+
+#steps button small,
+.svtok .nm em,
+.cph,
+.vp-lbl,
+.tac-sub-head,
+.tac-table,
+.tac-anim-track,
+.phase .stats span,
+.kpi span {
+  font-size: var(--f-sm);
+}
+
+.parchment-folio {
+  color: var(--ink);
+  border: 1px solid var(--paper-frame-border);
+  border-radius: 4px;
+  background:
+    var(--paper-inset-frame),
+    var(--paper-stock);
+  box-shadow: var(--paper-stack-shadow);
+}
+
+.ribbon-h {
+  position: relative;
+  padding: 4px 24px 4px 21px;
+  background: var(--ribbon-bg);
+  border-block: 1px solid #c69d5f;
+  color: var(--ribbon-ink);
+  font-family: var(--font-cjk);
+  font-size: var(--f-h3);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  clip-path: polygon(9px 0, 100% 0, calc(100% - 8px) 50%, 100% 100%, 9px 100%, 0 50%);
+  box-shadow:
+    inset 0 1px 0 #f0cf92,
+    inset 0 -1px 0 #a98146,
+    0 2px 4px rgba(42, 24, 10, 0.34);
+}
+
+.ribbon-h::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  background: #ffe5a8;
+  border: 1px solid #6e4b23;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+}
+
+.seg {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #967240;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #1b2230 0%, #141a25 100%);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.55);
+  color: var(--text);
+  font-size: var(--f-sm);
+}
+
+.seg > button,
+.btn-primary,
+.btn-ghost {
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 1px solid #967240;
+  border-radius: 4px;
+  font-size: var(--f-sm);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: filter 0.14s ease, background 0.14s ease, border-color 0.14s ease;
+}
+
+.seg > button {
+  border-color: transparent;
+  color: #e8d8ba;
+}
+
+.seg > button:enabled:hover {
+  background: rgba(216, 179, 106, 0.12);
+  color: #fff4dc;
+}
+
+.seg > button[aria-pressed="true"],
+.seg > button[aria-selected="true"],
+.btn-ghost {
+  background: linear-gradient(180deg, #fbf0d2 0%, #ebd4a4 54%, #d6b274 100%);
+  border-color: #987240;
+  color: #28180c;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 250, 236, 0.78),
+    inset 0 -1px 2px rgba(126, 84, 36, 0.32),
+    0 1px 3px rgba(38, 22, 10, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #674a2c 0%, #46301d 52%, #342214 100%);
+  border-color: #8e6738;
+  color: #fff4da;
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 214, 158, 0.44),
+    inset 0 1px 0 rgba(255, 244, 214, 0.34),
+    0 2px 5px rgba(38, 22, 10, 0.42);
+}
+
+.btn-ghost:enabled:hover,
+.btn-primary:enabled:hover {
+  filter: brightness(1.07);
+}
+
+.seg > button:focus-visible,
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible,
+#bar #steps button:focus-visible {
+  outline: 2px solid #f0cb82;
+  outline-offset: -2px;
+}
+
+.seg > button:disabled,
+.btn-primary:disabled,
+.btn-ghost:disabled {
+  opacity: .65;
+}
+
+/* Tactile engraved selects, inputs, sliders & checkboxes (D-026 §3.4) */
+select.sel {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 5px 24px 5px 9px;
+  border: 1px solid #a6824c;
+  border-radius: 4px;
+  background-color: #1f1914;
+  background-image:
+    var(--chevron-gold),
+    linear-gradient(180deg, #18130f 0%, #261e17 100%);
+  background-position: right 8px center, 0 0;
+  background-size: 9px 6px, 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.68),
+    0 1px 0 rgba(244, 214, 154, 0.16);
+  color: #f5e6c8;
+  font: 600 13px/1.25 var(--font-cjk);
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+select.sel:hover {
+  border-color: #d6b272;
+}
+
+select.sel:focus-visible {
+  outline: 2px solid #ecc67b;
+  outline-offset: 1px;
+}
+
+select.sel option {
+  background-color: #1e1812;
+  color: #f5e6c8;
+}
+
+input.search,
+input[type="text"],
+input[type="search"],
+input[type="number"] {
+  border: 1px solid #8f6d40;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #17120e 0%, #231b15 100%);
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.65),
+    0 1px 0 rgba(244, 214, 154, 0.14);
+  color: #f5e6c8;
+  padding: 5px 9px;
+  font: 600 13px/1.25 var(--font-cjk);
+  letter-spacing: 0.02em;
+}
+
+input.search::placeholder,
+input[type="text"]::placeholder,
+input[type="search"]::placeholder {
+  color: #bfb095;
+  opacity: 1;
+}
+
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid #8e6b3e;
+  background: linear-gradient(180deg, #2b2118 0%, #433425 100%);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff4cf, #d4a65a 62%, #7d5627);
+  border: 1.5px solid #4a3014;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid #8e6b3e;
+  background: linear-gradient(180deg, #2b2118 0%, #433425 100%);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff4cf, #d4a65a 62%, #7d5627);
+  border: 1.5px solid #4a3014;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border: 1px solid #a6824c;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #1b1510 0%, #2a2119 100%);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.65);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  border-color: #f3d28e;
+  background-color: #d9b26a;
+  background-image:
+    var(--check-dark),
+    linear-gradient(180deg, #fae8be 0%, #d4a55a 100%);
+  background-position: center, 0 0;
+  background-size: 11px 11px, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid #ecc67b;
+  outline-offset: 1px;
+}
+
+:root.p3-topbar #app {
+  grid-template: var(--bar-height) minmax(0, 1fr) / minmax(0, 1fr);
+}
+
+:root.p3-topbar #bar {
+  height: var(--bar-height);
+  gap: 12px;
+  padding-inline: var(--stage-gutter);
+  background: linear-gradient(180deg, #1d2533 0%, #131924 56%, #18202d 100%);
+}
+
+:root.p3-topbar .step { padding: 14px 18px; }
+:root.p3-topbar :is(#s2, #s4, #s5) { padding: 3px var(--stage-gutter); }
+
+#bar #steps {
+  flex: 0 1 610px;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+  min-width: 0;
+  padding: 0;
+  overflow: auto hidden;
+  background: transparent;
+  border: 0;
+}
+
+#bar #steps button {
+  flex: 1 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+#bar #steps button b {
+  font: 700 var(--f-sm)/1 var(--font-latin);
+}
+
+#bar #steps button small {
+  opacity: 1;
+  letter-spacing: inherit;
+}
+
+#bar #steps button:is(.on, [aria-current="step"]) {
+  background: linear-gradient(180deg, #faecc8 0%, #e7c689 52%, #cfa25e 100%);
+  color: #28170b;
+}
+
+#bar #steps button.on::after { content: none; }
+#bar #steps button.lock { color: var(--dim); opacity: 1; }
+
+@media (width < 1100px) { :root { --right-col-w: clamp(296px, 50vw, 384px); } }

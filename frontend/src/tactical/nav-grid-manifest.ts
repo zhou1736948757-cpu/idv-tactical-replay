@@ -1,0 +1,285 @@
+/**
+ * Offline 9-map PIL navigation-grid manifest (zero DOM, zero external URLs).
+ * Ported from Peking-University-Identity-V-League/pil-identity-v-tactical-friend/js/data/nav-grid-manifest.js
+ * with all PNG paths mapped to local /assets/nav-grid/*.png.
+ */
+import type { PilMapId } from './types';
+
+export interface NavGridBasementMeta {
+  /** Staircase exit coordinate in map pixels [x, y]. */
+  readonly exit: readonly [number, number];
+  /** Extra slope distance (meters) from basement floor to staircase exit. */
+  readonly slopeExtraM: number;
+  /** Basement center coordinate in map pixels [x, y]. */
+  readonly center: readonly [number, number];
+}
+
+export interface NavGridManifestEntry {
+  readonly mapId: PilMapId;
+  readonly scene: string;
+  readonly file: string;
+  readonly url: string;
+  readonly gridW: number;
+  readonly gridH: number;
+  readonly cellPx: number;
+  readonly metersPerCell: number;
+  readonly windows: ReadonlyArray<readonly [number, number]>;
+  readonly basements: ReadonlyArray<NavGridBasementMeta>;
+}
+
+const RAW_NAV_GRID_MANIFEST: Record<PilMapId, NavGridManifestEntry> = {
+  0: {
+    mapId: 0,
+    scene: 'ordnance_factory1',
+    file: 'ArmsFactory.png',
+    url: '/assets/nav-grid/ArmsFactory.png',
+    gridW: 750,
+    gridH: 644,
+    cellPx: 1,
+    metersPerCell: 0.2216,
+    windows: [
+      [199.4, 576.6],
+      [97.2, 574],
+      [115.2, 542.6],
+      [128.9, 514.8],
+      [183.3, 512.9],
+      [496.2, 491.6],
+      [571.8, 475.7],
+      [113.4, 461.5],
+      [154.7, 252.5],
+      [298.6, 239.9],
+      [132.2, 199.3],
+      [573.2, 198],
+      [125.2, 180.9],
+      [541.7, 180.1],
+      [417.7, 146.8],
+      [581.7, 137.5],
+      [566.3, 85],
+    ],
+    basements: [
+      { exit: [523.6, 444.2], slopeExtraM: 2.63, center: [539, 486.5] },
+      { exit: [283.4, 188.4], slopeExtraM: 2.1, center: [300, 235] },
+    ],
+  },
+  1: {
+    mapId: 1,
+    scene: 'h55_hospital2',
+    file: 'SacredHeartHospital.png',
+    url: '/assets/nav-grid/SacredHeartHospital.png',
+    gridW: 644,
+    gridH: 604,
+    cellPx: 1,
+    metersPerCell: 0.2352,
+    windows: [
+      [534.3, 498.3],
+      [211.7, 476.8],
+      [388.9, 423.6],
+      [111, 404.8],
+      [293.3, 383.3],
+      [217.2, 371.3],
+      [95.4, 320.7],
+      [121.2, 302.7],
+      [340.4, 234.3],
+      [487.8, 161],
+      [234.9, 97.8],
+      [348, 72.6],
+      [273, 54.4],
+    ],
+    basements: [
+      { exit: [283.3, 352.8], slopeExtraM: 1.72, center: [297.8, 298.5] },
+      { exit: [536, 146.8], slopeExtraM: 1.17, center: [482.8, 163.2] },
+    ],
+  },
+  2: {
+    mapId: 2,
+    scene: 'h55_demo',
+    file: 'TheRedChurch.png',
+    url: '/assets/nav-grid/TheRedChurch.png',
+    gridW: 596,
+    gridH: 599,
+    cellPx: 1,
+    metersPerCell: 0.2576,
+    windows: [
+      [233, 520.3],
+      [234.4, 179],
+      [258.2, 241.8],
+      [271.5, 197.9],
+      [306.2, 157.9],
+      [345.9, 357.2],
+      [416.5, 228.9],
+      [434.3, 157.7],
+      [447.6, 178],
+      [539.2, 301.7],
+    ],
+    basements: [
+      { exit: [256.8, 344.6], slopeExtraM: 1.37, center: [310, 318.8] },
+      { exit: [277.7, 119.7], slopeExtraM: 1.74, center: [300, 175] },
+    ],
+  },
+  3: {
+    mapId: 3,
+    scene: 'h55_fishingvillage',
+    file: 'LakesideVillage.png',
+    url: '/assets/nav-grid/LakesideVillage.png',
+    gridW: 1280,
+    gridH: 1208,
+    cellPx: 1,
+    metersPerCell: 0.1555,
+    windows: [
+      [167.7, 350],
+      [285.6, 245.3],
+      [289.6, 961],
+      [295.6, 558.3],
+      [300.6, 485],
+      [337.6, 991.8],
+      [376.9, 957.4],
+      [379.4, 718.2],
+      [383.8, 607.4],
+      [397.6, 797.1],
+      [505.3, 371.2],
+      [640.2, 982.8],
+      [717.9, 306.9],
+      [1002.5, 722.8],
+      [1006.7, 538.9],
+      [1052.2, 621.8],
+      [1093.8, 642.8],
+    ],
+    basements: [
+      { exit: [543.9, 334.3], slopeExtraM: 2, center: [600.2, 307.8] },
+      { exit: [1123.3, 667.6], slopeExtraM: 1.42, center: [1059.5, 699.8] },
+    ],
+  },
+  4: {
+    mapId: 4,
+    scene: 'h55_playground',
+    file: 'MoonlitRiverPark.png',
+    url: '/assets/nav-grid/MoonlitRiverPark.png',
+    gridW: 1492,
+    gridH: 1028,
+    cellPx: 1,
+    metersPerCell: 0.1236,
+    windows: [
+      [63.7, 286.6],
+      [104.1, 413.4],
+      [160.6, 471.6],
+      [247.3, 772.5],
+      [303.6, 610.3],
+      [394.9, 865.7],
+      [399.2, 502.3],
+      [457.2, 183.2],
+      [474.4, 579.1],
+      [483.6, 244.8],
+      [900.2, 454],
+      [907.6, 186.4],
+      [975.5, 530.7],
+      [1094.7, 701.1],
+    ],
+    basements: [
+      { exit: [373.8, 271.5], slopeExtraM: 2, center: [454, 242.5] },
+      { exit: [1012.9, 857.1], slopeExtraM: 2.21, center: [953.8, 799.2] },
+    ],
+  },
+  5: {
+    mapId: 5,
+    scene: 'ordnance_factory2',
+    file: 'LeosMemory.png',
+    url: '/assets/nav-grid/LeosMemory.png',
+    gridW: 750,
+    gridH: 635,
+    cellPx: 1,
+    metersPerCell: 0.2248,
+    windows: [
+      [108.1, 558.8],
+      [72.2, 536.6],
+      [284.9, 521.3],
+      [396.8, 479.7],
+      [304, 439.9],
+      [637.8, 424.8],
+      [126.9, 348.6],
+      [364.4, 180.3],
+      [241.6, 54.5],
+    ],
+    basements: [
+      { exit: [345.8, 134.3], slopeExtraM: 2.1, center: [368.5, 175.8] },
+      { exit: [313.3, 446.9], slopeExtraM: 2.4, center: [340.8, 483] },
+    ],
+  },
+  6: {
+    mapId: 6,
+    scene: 'h55_sleepingtown3',
+    file: 'EversleepingTown.png',
+    url: '/assets/nav-grid/EversleepingTown.png',
+    gridW: 750,
+    gridH: 874,
+    cellPx: 1,
+    metersPerCell: 0.1827,
+    windows: [
+      [182.7, 253.1],
+      [200.1, 534.9],
+      [249.2, 281.9],
+      [404.1, 520.4],
+      [494.9, 630],
+      [522, 336.4],
+      [611.1, 112.8],
+      [611.9, 478.3],
+    ],
+    basements: [
+      { exit: [585.8, 141.9], slopeExtraM: 2.03, center: [566, 94.8] },
+      { exit: [654.5, 658.2], slopeExtraM: 2.25, center: [700.8, 639.2] },
+    ],
+  },
+  7: {
+    mapId: 7,
+    scene: 'h55_chinatown',
+    file: 'ChinaTown.png',
+    url: '/assets/nav-grid/ChinaTown.png',
+    gridW: 1345,
+    gridH: 1152,
+    cellPx: 1,
+    metersPerCell: 0.1071,
+    windows: [
+      [153.4, 704.5],
+      [166.3, 256.4],
+      [167.7, 578.8],
+      [171.5, 1050.6],
+      [248.7, 421.6],
+      [382, 643.7],
+      [475.3, 1039.7],
+      [635.8, 527.7],
+      [838, 450.3],
+      [888.9, 1037.2],
+      [1131.2, 835.3],
+      [1158.5, 147.4],
+      [1178.7, 862.4],
+      [1255.2, 204],
+    ],
+    basements: [
+      { exit: [871.8, 834.7], slopeExtraM: 1.87, center: [909, 911] },
+      { exit: [250.8, 654.5], slopeExtraM: 1.19, center: [178.5, 690.8] },
+    ],
+  },
+  8: {
+    mapId: 8,
+    scene: 'h55_deadforest_sp',
+    file: 'Darkwoods.png',
+    url: '/assets/nav-grid/Darkwoods.png',
+    gridW: 1247,
+    gridH: 1265,
+    cellPx: 1,
+    metersPerCell: 0.1073,
+    windows: [
+      [274.3, 1023.5],
+      [496.1, 292.2],
+      [808.3, 735.6],
+      [1001.8, 1046.9],
+      [1106.4, 459],
+      [1115.8, 677.6],
+    ],
+    basements: [
+      { exit: [884.4, 408.8], slopeExtraM: 2.55, center: [922.8, 493] },
+      { exit: [477.1, 926.4], slopeExtraM: 2.09, center: [393, 956.2] },
+    ],
+  },
+};
+
+export const NAV_GRID_MANIFEST: Readonly<Record<PilMapId, NavGridManifestEntry>> = Object.freeze(RAW_NAV_GRID_MANIFEST);

@@ -1,0 +1,59 @@
+{
+  "mapId": "h55_playground",
+  "nameZh": "月亮河公园",
+  "sourceFile": "h55_playground.runtime-7d9f8a4d9075e2b8.html",
+  "sourceHtmlBytes": 52071912,
+  "rawGlbBytes": 28709188,
+  "rawGlbGzipBytes": 15005697,
+  "optimizedGlbBytes": 4238788,
+  "optimizedGlbGzipBytes": 2923782,
+  "navGlbBytes": 58192,
+  "sizeReductionVsHtmlPct": 91.9,
+  "sizeReductionVsGlbPct": 85.2,
+  "gzipReductionVsGlbPct": 80.5,
+  "texBeforeBytes": 4556441,
+  "texAfterBytes": 255018,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 10,
+    "prop": 100,
+    "arch": 102
+  },
+  "before": {
+    "nodes": 3107,
+    "meshes": 213,
+    "materials": 251,
+    "textures": 64,
+    "uniqueVerts": 580188,
+    "uniqueTris": 318570,
+    "drawCalls": 3240,
+    "renderedTris": 1094589,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 157,
+    "meshes": 157,
+    "materials": 60,
+    "textures": 59,
+    "uniqueVerts": 309689,
+    "uniqueTris": 203674,
+    "drawCalls": 185,
+    "renderedTris": 680365,
+    "instancedNodes": 125
+  },
+  "drawCallReductionPct": 94.3,
+  "triReductionPct": 37.8,
+  "elapsedMs": 1876,
+  "webgl": {
+    "calls": 207,
+    "triangles": 700931,
+    "geometries": 184,
+    "textures": 60,
+    "size": [
+      3387.8,
+      1148.5,
+      3750.5
+    ],
+    "errors": []
+  }
+}

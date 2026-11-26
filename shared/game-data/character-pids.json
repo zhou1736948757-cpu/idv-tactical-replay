@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "data-honesty-first",
+  "description": "角色 PID 注册表模板。遵循数据诚实原则：仅当通过受控单人自定义录像交叉验证 pid -> 角色中文名/roleKey 后，才将 verified 设为 true；未验证的 PID 一律保持 verified: false 并在前端回退显示原始 PID #N。",
+  "shippedHunterPortraits": [
+    "26号守卫", "使徒", "博士", "厂长", "台球手", "喧嚣", "噩梦", "女王蜂", "孽蜥",
+    "守夜人", "宿伞之魂", "小丑", "小提琴家", "心兽", "愚人金", "摄影师", "时空之影", "杂货商",
+    "杰克", "梦之女巫", "歌剧演员", "渔女", "爱哭鬼", "牙医", "疯眼", "破轮", "红夫人",
+    "红蝶", "蜘蛛", "蜡像师", "记录员", "跛脚羊", "隐士", "雕刻家", "鹿头", "黄衣之主"
+  ],
+  "hunters": {
+    "19": { "pid": 19, "camp": 1, "roleKey": null, "nameZh": null, "portrait": null, "verified": false, "notes": "预置样本观察到的监管者 PID（待自定义单局核验）" },
+    "84": { "pid": 84, "camp": 1, "roleKey": null, "nameZh": null, "portrait": null, "verified": false, "notes": "预置样本观察到的监管者 PID（待自定义单局核验）" },
+    "101": { "pid": 101, "camp": 1, "roleKey": null, "nameZh": null, "portrait": null, "verified": false, "notes": "预置样本观察到的监管者 PID（待自定义单局核验）" },
+    "102": { "pid": 102, "camp": 1, "roleKey": null, "nameZh": null, "portrait": null, "verified": false, "notes": "回放中携带 et=1110 target_pos 位移同步事件（见 backend/app/extractor.py）" },
+    "126": { "pid": 126, "camp": 1, "roleKey": null, "nameZh": null, "portrait": null, "verified": false, "notes": "预置样本观察到的监管者 PID（待自定义单局核验）" },
+    "147": { "pid": 147, "camp": 1, "roleKey": null, "nameZh": null, "portrait": null, "verified": false, "notes": "预置样本观察到的监管者 PID（待自定义单局核验）" },
+    "153": { "pid": 153, "camp": 1, "roleKey": null, "nameZh": null, "portrait": null, "verified": false, "notes": "预置样本观察到的监管者 PID（待自定义单局核验）" }
+  },
+  "survivors": {
+    "14": { "pid": 14, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "23": { "pid": 23, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "32": { "pid": 32, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "36": { "pid": 36, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "59": { "pid": 59, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "72": { "pid": 72, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "73": { "pid": 73, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "78": { "pid": 78, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "83": { "pid": 83, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "87": { "pid": 87, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "88": { "pid": 88, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "89": { "pid": 89, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "90": { "pid": 90, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "94": { "pid": 94, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "97": { "pid": 97, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "106": { "pid": 106, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "107": { "pid": 107, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "111": { "pid": 111, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "124": { "pid": 124, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "135": { "pid": 135, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "144": { "pid": 144, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "146": { "pid": 146, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" },
+    "154": { "pid": 154, "camp": 2, "roleKey": null, "nameZh": null, "verified": false, "notes": "预置样本观察到的求生者 PID（待核验）" }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "mapId": "h55_deadforest_sp",
+  "nameZh": "不归林",
+  "sourceFile": "h55_deadforest_sp.runtime-6755244571c166ae.html",
+  "sourceHtmlBytes": 51234255,
+  "rawGlbBytes": 27047120,
+  "rawGlbGzipBytes": 14650578,
+  "optimizedGlbBytes": 5204928,
+  "optimizedGlbGzipBytes": 3810002,
+  "navGlbBytes": 94560,
+  "sizeReductionVsHtmlPct": 89.8,
+  "sizeReductionVsGlbPct": 80.8,
+  "gzipReductionVsGlbPct": 74,
+  "texBeforeBytes": 2214202,
+  "texAfterBytes": 148460,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 49,
+    "prop": 193,
+    "arch": 42
+  },
+  "before": {
+    "nodes": 2363,
+    "meshes": 285,
+    "materials": 219,
+    "textures": 32,
+    "uniqueVerts": 547073,
+    "uniqueTris": 325102,
+    "drawCalls": 2449,
+    "renderedTris": 1317216,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 157,
+    "meshes": 157,
+    "materials": 27,
+    "textures": 25,
+    "uniqueVerts": 372155,
+    "uniqueTris": 232231,
+    "drawCalls": 181,
+    "renderedTris": 844961,
+    "instancedNodes": 149
+  },
+  "drawCallReductionPct": 92.6,
+  "triReductionPct": 35.9,
+  "elapsedMs": 1682,
+  "webgl": {
+    "calls": 206,
+    "triangles": 857125,
+    "geometries": 180,
+    "textures": 26,
+    "size": [
+      5999.7,
+      552.9,
+      5626
+    ],
+    "errors": []
+  }
+}

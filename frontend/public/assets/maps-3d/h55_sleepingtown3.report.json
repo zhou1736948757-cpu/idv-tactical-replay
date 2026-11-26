@@ -1,0 +1,59 @@
+{
+  "mapId": "h55_sleepingtown3",
+  "nameZh": "永眠镇",
+  "sourceFile": "h55_sleepingtown3.runtime-14dfd1477e5c2cb8.html",
+  "sourceHtmlBytes": 38505886,
+  "rawGlbBytes": 19487996,
+  "rawGlbGzipBytes": 10319169,
+  "optimizedGlbBytes": 3127792,
+  "optimizedGlbGzipBytes": 1868467,
+  "navGlbBytes": 40100,
+  "sizeReductionVsHtmlPct": 91.9,
+  "sizeReductionVsGlbPct": 84,
+  "gzipReductionVsGlbPct": 81.9,
+  "texBeforeBytes": 3606566,
+  "texAfterBytes": 189628,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 16,
+    "prop": 196,
+    "arch": 57
+  },
+  "before": {
+    "nodes": 2717,
+    "meshes": 271,
+    "materials": 327,
+    "textures": 53,
+    "uniqueVerts": 348526,
+    "uniqueTris": 199356,
+    "drawCalls": 3036,
+    "renderedTris": 1049812,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 200,
+    "meshes": 200,
+    "materials": 48,
+    "textures": 46,
+    "uniqueVerts": 196615,
+    "uniqueTris": 122925,
+    "drawCalls": 249,
+    "renderedTris": 609024,
+    "instancedNodes": 177
+  },
+  "drawCallReductionPct": 91.8,
+  "triReductionPct": 42,
+  "elapsedMs": 1472,
+  "webgl": {
+    "calls": 281,
+    "triangles": 641999,
+    "geometries": 248,
+    "textures": 47,
+    "size": [
+      4338.9,
+      567.6,
+      4193.8
+    ],
+    "errors": []
+  }
+}

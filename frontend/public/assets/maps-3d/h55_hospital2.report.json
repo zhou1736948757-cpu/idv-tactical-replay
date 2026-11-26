@@ -1,0 +1,59 @@
+{
+  "mapId": "h55_hospital2",
+  "nameZh": "圣心医院",
+  "sourceFile": "h55_hospital2.runtime-7dae0ca323932da7.html",
+  "sourceHtmlBytes": 40861835,
+  "rawGlbBytes": 19535796,
+  "rawGlbGzipBytes": 10627069,
+  "optimizedGlbBytes": 2824608,
+  "optimizedGlbGzipBytes": 1890644,
+  "navGlbBytes": 149472,
+  "sizeReductionVsHtmlPct": 93.1,
+  "sizeReductionVsGlbPct": 85.5,
+  "gzipReductionVsGlbPct": 82.2,
+  "texBeforeBytes": 4647791,
+  "texAfterBytes": 229410,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 14,
+    "prop": 99,
+    "arch": 115
+  },
+  "before": {
+    "nodes": 2852,
+    "meshes": 229,
+    "materials": 335,
+    "textures": 67,
+    "uniqueVerts": 362017,
+    "uniqueTris": 211812,
+    "drawCalls": 3196,
+    "renderedTris": 910354,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 135,
+    "meshes": 135,
+    "materials": 62,
+    "textures": 60,
+    "uniqueVerts": 162948,
+    "uniqueTris": 119174,
+    "drawCalls": 171,
+    "renderedTris": 453264,
+    "instancedNodes": 106
+  },
+  "drawCallReductionPct": 94.6,
+  "triReductionPct": 50.2,
+  "elapsedMs": 1605,
+  "webgl": {
+    "calls": 204,
+    "triangles": 484916,
+    "geometries": 169,
+    "textures": 61,
+    "size": [
+      2813.9,
+      988.6,
+      3108.6
+    ],
+    "errors": []
+  }
+}

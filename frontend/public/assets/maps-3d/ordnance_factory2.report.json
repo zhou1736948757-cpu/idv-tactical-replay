@@ -1,0 +1,59 @@
+{
+  "mapId": "ordnance_factory2",
+  "nameZh": "里奥的回忆",
+  "sourceFile": "ordnance_factory2.runtime-8218cf7d58d9da93.html",
+  "sourceHtmlBytes": 37642919,
+  "rawGlbBytes": 17070136,
+  "rawGlbGzipBytes": 8121792,
+  "optimizedGlbBytes": 2344432,
+  "optimizedGlbGzipBytes": 1553497,
+  "navGlbBytes": 51100,
+  "sizeReductionVsHtmlPct": 93.8,
+  "sizeReductionVsGlbPct": 86.3,
+  "gzipReductionVsGlbPct": 80.9,
+  "texBeforeBytes": 3539839,
+  "texAfterBytes": 214714,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 13,
+    "prop": 100,
+    "arch": 46
+  },
+  "before": {
+    "nodes": 4580,
+    "meshes": 162,
+    "materials": 212,
+    "textures": 51,
+    "uniqueVerts": 279354,
+    "uniqueTris": 154210,
+    "drawCalls": 4938,
+    "renderedTris": 1146041,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 125,
+    "meshes": 125,
+    "materials": 48,
+    "textures": 46,
+    "uniqueVerts": 111233,
+    "uniqueTris": 79562,
+    "drawCalls": 153,
+    "renderedTris": 645696,
+    "instancedNodes": 107
+  },
+  "drawCallReductionPct": 96.9,
+  "triReductionPct": 43.7,
+  "elapsedMs": 1082,
+  "webgl": {
+    "calls": 185,
+    "triangles": 684780,
+    "geometries": 151,
+    "textures": 47,
+    "size": [
+      3173.2,
+      454.3,
+      3516.6
+    ],
+    "errors": []
+  }
+}

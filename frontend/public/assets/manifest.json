@@ -1,0 +1,436 @@
+{
+  "repo": "zhou1736948757-cpu/notes",
+  "generated_at": "2026-11-24T01:06:04.800189+08:00",
+  "transport": "gh api (blob base64 / raw media type) with Python byte writes",
+  "counts": {
+    "bg": 1,
+    "seal": 1,
+    "maps": 9,
+    "hunters": 36
+  },
+  "files": [
+    {
+      "path": "bg.jpg",
+      "size_bytes": 137761,
+      "sha256": "d1c73c0470ad6a7b37829dfca24fe4181ad19f878b502186e11faec6f026c4b4",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/bg.jpg",
+      "git_sha": "65a8e9ab91006f989caa9473bf0a125eac2aecfe"
+    },
+    {
+      "path": "hunters/26号守卫.png",
+      "size_bytes": 30412,
+      "sha256": "18dc0d9d15e2f45ed51aa5c27654fab03e84680b9015576a905b8dc6352d884d",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/26号守卫.png",
+      "git_sha": "baf0a30096045e64832177ac49710c26319cb278"
+    },
+    {
+      "path": "hunters/使徒.png",
+      "size_bytes": 21599,
+      "sha256": "3a0c5fdacf12032994e62929f6db159d759afb26a34d1b31fe50b5137e61099c",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/使徒.png",
+      "git_sha": "8751c9831c4e652c8ae4e65ec1a3e97860e3e077"
+    },
+    {
+      "path": "hunters/博士.png",
+      "size_bytes": 30633,
+      "sha256": "6c79aded21ff76cb1e8625a28a74d890dc94853486d9770694c5a5e2f00d3b8c",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/博士.png",
+      "git_sha": "f556f7dd09bd7966ce1f6c9a415b10dd1287c80f"
+    },
+    {
+      "path": "hunters/厂长.png",
+      "size_bytes": 25777,
+      "sha256": "969d2265b500650c1c3bff6e1e7becd932b18ae448695d6a3ed17915e39fddb8",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/厂长.png",
+      "git_sha": "4204796ec07f482b3221c35064d6ea5b5c51bb32"
+    },
+    {
+      "path": "hunters/台球手.png",
+      "size_bytes": 28801,
+      "sha256": "1790b244105e98547fec1683e6c53111bc125b6f6848a2bc0ea1507da7adbd96",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/台球手.png",
+      "git_sha": "e493c873e9e86487831e8a7d92dc581024d45295"
+    },
+    {
+      "path": "hunters/喧嚣.png",
+      "size_bytes": 29443,
+      "sha256": "db173990cbbf8f2a6b4dd7340dc43f8a88144ac27a33de0040798c344e7ad0d8",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/喧嚣.png",
+      "git_sha": "1f144887d7b6355fc7e67525f509ec6fb69e348f"
+    },
+    {
+      "path": "hunters/噩梦.png",
+      "size_bytes": 33838,
+      "sha256": "30a82430f86adc4187a65a10290d6a3770a9ec65fee008dfc929d2f4108f542c",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/噩梦.png",
+      "git_sha": "f3c3d830eee23f548d3fc80facb88dc854d03f3b"
+    },
+    {
+      "path": "hunters/女王蜂.png",
+      "size_bytes": 32305,
+      "sha256": "c7b7bef59f30e852fffb5effd125fa306d778eee6207a4cf7422493eb9b9d3b2",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/女王蜂.png",
+      "git_sha": "77baff0f71aaa0d1807005847bcbcd7aa229d752"
+    },
+    {
+      "path": "hunters/孽蜥.png",
+      "size_bytes": 29692,
+      "sha256": "2b1d46b724921538fe474a56543ec04c609c72805ee6e1168cc40fd6e3e788a0",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/孽蜥.png",
+      "git_sha": "43463e658b546c31bf2504d6363973bc8798f595"
+    },
+    {
+      "path": "hunters/守夜人.png",
+      "size_bytes": 31641,
+      "sha256": "cda767fd8899b1f3d992620bc9113a2a19994a10dc8128296dfcdd1fe98d3564",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/守夜人.png",
+      "git_sha": "7b240de653325e944c96e7d5fc76e46bdce5135b"
+    },
+    {
+      "path": "hunters/宿伞之魂.png",
+      "size_bytes": 32589,
+      "sha256": "99417d4c5f7fa955aec032337a3790e2c4e8ea0422fa84e65877c26f6f038105",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/宿伞之魂.png",
+      "git_sha": "7c9bed2288a7facf1123071a5c49540a04955884"
+    },
+    {
+      "path": "hunters/小丑.png",
+      "size_bytes": 35865,
+      "sha256": "73b950889f75484fe05ae24383bfd67440da56785a3cf487f31db4869f6dcdb4",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/小丑.png",
+      "git_sha": "c5f141ff150fc651eb6c50b29e8a93b9c714ce10"
+    },
+    {
+      "path": "hunters/小提琴家.png",
+      "size_bytes": 33578,
+      "sha256": "aeb90bef6af7c124f2eaf9fff06041f3671372e417f85b42460432a34ba6f9a7",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/小提琴家.png",
+      "git_sha": "cd8b66d9db2b009dabcdb6c830d6039ee3561357"
+    },
+    {
+      "path": "hunters/心兽.png",
+      "size_bytes": 24100,
+      "sha256": "68a74277fade95264b32db36f84dae24c1a413747d08aca99ffc11a5f21564d5",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/心兽.png",
+      "git_sha": "d37673c8e01685169265ba9b0b9d017ff775c931"
+    },
+    {
+      "path": "hunters/愚人金.png",
+      "size_bytes": 27968,
+      "sha256": "95e88dafe20d4c10c038abcfdba8e7312a795172c5505bcc034782cb76ec7530",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/愚人金.png",
+      "git_sha": "932cb112fed29ef6e6c273528c130f7b7184c505"
+    },
+    {
+      "path": "hunters/摄影师.png",
+      "size_bytes": 28057,
+      "sha256": "9841068d4d011a94f949bec5b20eae4352ff31f2addc728446f078ca5015e05b",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/摄影师.png",
+      "git_sha": "9e8e04278e7e2f91b4c8eee8b0ae4dc1d52a5950"
+    },
+    {
+      "path": "hunters/时空之影.png",
+      "size_bytes": 35748,
+      "sha256": "7f99bc6c544b3a940b691f7b7b8001feb139987fd2ec75c81683895cb25082d9",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/时空之影.png",
+      "git_sha": "bc446b7045eff1f3508346f2607d493fbea52022"
+    },
+    {
+      "path": "hunters/杂货商.png",
+      "size_bytes": 27055,
+      "sha256": "6525e50d54159fa5df34e64b1e9589afbf5d0fb19f979e0f6a2205b87191f813",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/杂货商.png",
+      "git_sha": "a11ccfae6ed7d736826addcbf9d8ac557a45fcb4"
+    },
+    {
+      "path": "hunters/杰克.png",
+      "size_bytes": 25312,
+      "sha256": "b18af72654ed2eb73b695b9c588b6af054b468147e30b36588cc4b73faebbef2",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/杰克.png",
+      "git_sha": "efc7f88435fc0ba4214aa2dd6dfc928514f91964"
+    },
+    {
+      "path": "hunters/梦之女巫.png",
+      "size_bytes": 34902,
+      "sha256": "361e99cbcab770ee0a2df5ef16e8f0901c38c1215748cd77f044f3e16c1aef26",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/梦之女巫.png",
+      "git_sha": "30da6c048da8ac75ce7c9a099027fb1ff7c66d8f"
+    },
+    {
+      "path": "hunters/歌剧演员.png",
+      "size_bytes": 33540,
+      "sha256": "e833d7d02302e989a76895b27520b7050ab432394e00173070e7d07799e28129",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/歌剧演员.png",
+      "git_sha": "74aa3300002c5d05f69b1b56cc2e278c114d5bbd"
+    },
+    {
+      "path": "hunters/渔女.png",
+      "size_bytes": 29274,
+      "sha256": "4b645408150755e0681f5bab08ea3040a9cbe951f9205655af4eda82c976b025",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/渔女.png",
+      "git_sha": "a0df9ff42cda91d1d8ed93f8281a25230d060342"
+    },
+    {
+      "path": "hunters/爱哭鬼.png",
+      "size_bytes": 28077,
+      "sha256": "7c444bdc3d3de6d5d4168d03ae687f13c8fa9a655602d5b3b21f4d9ffaa5a2b0",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/爱哭鬼.png",
+      "git_sha": "70000e343f5b11e8882bef6268fa97901c4f8bd1"
+    },
+    {
+      "path": "hunters/牙医.png",
+      "size_bytes": 25333,
+      "sha256": "98cfad36f0ed28edb94c55f59004e6c8e3557db3daf9914202334ea374c641a9",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/牙医.png",
+      "git_sha": "87af1a9893efed101457012fab2ebc1452d01819"
+    },
+    {
+      "path": "hunters/疯眼.png",
+      "size_bytes": 33724,
+      "sha256": "bacaec813e4424a03011dcf3bb7a028a2d44040a1064bc7e2b332f4fcba7f84d",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/疯眼.png",
+      "git_sha": "9518151847b4e0b213ac908bb2ee922c1cb47b2a"
+    },
+    {
+      "path": "hunters/破轮.png",
+      "size_bytes": 32492,
+      "sha256": "71f98038977469cb51656b4072c350d7d60cd2afcf1b020e18f72c3432b3f849",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/破轮.png",
+      "git_sha": "842ac35ef8237b45596fc0b1084c6bfd4785a21e"
+    },
+    {
+      "path": "hunters/红夫人.png",
+      "size_bytes": 31725,
+      "sha256": "ff46fb18dac600ccb0de571018a8d88576e5f5cd1d820c21cb0c1c5334f729ac",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/红夫人.png",
+      "git_sha": "9cfe79d9466a45d29b3922d45c65f3b92f6f3043"
+    },
+    {
+      "path": "hunters/红蝶.png",
+      "size_bytes": 35556,
+      "sha256": "eae69bf72b780361c604f8761055cac548a950f971588e61f880a91bf0e1a7a0",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/红蝶.png",
+      "git_sha": "8f3f5754dd2851f0914d91f8a142f5920fdaa090"
+    },
+    {
+      "path": "hunters/蜘蛛.png",
+      "size_bytes": 32858,
+      "sha256": "74cb7e1332f74aee61c5c14599a8bc5333e4a5b731b87d9c4fa9bcaf2b8d35fa",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/蜘蛛.png",
+      "git_sha": "94a8c58b56239a10e51181169fe17a4c5fe5d04b"
+    },
+    {
+      "path": "hunters/蜡像师.png",
+      "size_bytes": 31919,
+      "sha256": "086b4136ef21ad99f00fe38b0330db7dcd4c071ed58545e85779d07e606e2df3",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/蜡像师.png",
+      "git_sha": "ff74edd9bff136747c33edf427d3d7a3323edc39"
+    },
+    {
+      "path": "hunters/记录员.png",
+      "size_bytes": 26863,
+      "sha256": "b42055f2ef4d316efbeea7de46bf92621e87944d44852e932d19bd8606158251",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/记录员.png",
+      "git_sha": "20ebf0ed0c8aec298d3179453c8791d023dcae15"
+    },
+    {
+      "path": "hunters/跛脚羊.png",
+      "size_bytes": 27044,
+      "sha256": "69e6fbe482b81971a4b4db09493f8552f3bb36d5b2b49e6c23af14c8ec1f9778",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/跛脚羊.png",
+      "git_sha": "11ce92ab32fe5f68c5a754a73b6e813e1402fc4c"
+    },
+    {
+      "path": "hunters/隐士.png",
+      "size_bytes": 20429,
+      "sha256": "92009c1e807bda427887761247c40284306a3410b547b697d33051bd889baf55",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/隐士.png",
+      "git_sha": "993be6b26608320338a683394d39019076579549"
+    },
+    {
+      "path": "hunters/雕刻家.png",
+      "size_bytes": 29707,
+      "sha256": "3b240fce900c4edee5164ba88a874e04573f8081bfa38a924fe1d17b98d41b6d",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/雕刻家.png",
+      "git_sha": "65ec0153049636dcd69c2cb0ccf25514f5353a49"
+    },
+    {
+      "path": "hunters/鹿头.png",
+      "size_bytes": 31597,
+      "sha256": "85114305f0e4e0beff89be06cfad7beea89a28e999ad1fe65ca7ce2590d2a275",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/鹿头.png",
+      "git_sha": "b980731531087d3e84ce7d4bd107f19e93d4b908"
+    },
+    {
+      "path": "hunters/黄衣之主.png",
+      "size_bytes": 42529,
+      "sha256": "dd1fdbde839a3117d4c6c161740dd47ed9cdd64afe430fbe8f9fe0089bdee2f1",
+      "image_type": "png",
+      "header_hex": "89504e470d0a1a0a",
+      "source_path": "assets/hunters/黄衣之主.png",
+      "git_sha": "783052251669e3e83ab296c10257300da81c35aa"
+    },
+    {
+      "path": "maps/不归林_grid.jpg",
+      "size_bytes": 230951,
+      "sha256": "8e6cf881dcc1c8f9757dd9b84d6805263caa0ea4d3b0cfec9a95b307e2f1898d",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/不归林_grid.jpg",
+      "git_sha": "517f826d80fb6dc15e5ed504422dce3eb58afead"
+    },
+    {
+      "path": "maps/军工厂_grid.jpg",
+      "size_bytes": 205458,
+      "sha256": "93b150fa14ddbf7d00f7cbd52f74b62952bf7e1226c9045c096b54d4d54610ab",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/军工厂_grid.jpg",
+      "git_sha": "860369ca7f09652e562b83bfc8f385903f31e33d"
+    },
+    {
+      "path": "maps/唐人街_grid.jpg",
+      "size_bytes": 183091,
+      "sha256": "3a8fabd63d83c8b8be3e641c36331e3d8229db1fec562529f3a34dd1450e89ce",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/唐人街_grid.jpg",
+      "git_sha": "0ab3adafc929b2e590d442d2e59187e864f9fea6"
+    },
+    {
+      "path": "maps/圣心医院_grid.jpg",
+      "size_bytes": 176667,
+      "sha256": "7c4bce8ef10722bfadf8fb7a0594e0a3427db5a3477ed4d8c2a24c2d95e999c6",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/圣心医院_grid.jpg",
+      "git_sha": "6573110571de6d0d88f86e47bda6541d7975dce5"
+    },
+    {
+      "path": "maps/月亮河公园_grid.jpg",
+      "size_bytes": 217975,
+      "sha256": "a619242661ec7decb4fcd91b811b907f2fd29581221bcde6966f44793e187020",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/月亮河公园_grid.jpg",
+      "git_sha": "59290f5924454fd5852fee5e3f119842f3503ddb"
+    },
+    {
+      "path": "maps/永眠镇_grid.jpg",
+      "size_bytes": 137368,
+      "sha256": "07847d308895160d897ed0c26397775a55a083415d57767d3695c5b1099a584f",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/永眠镇_grid.jpg",
+      "git_sha": "e04c205be7e1bdb8af38c565e495df9be3347b07"
+    },
+    {
+      "path": "maps/湖景村_grid.jpg",
+      "size_bytes": 124606,
+      "sha256": "66c790be7f49daa7aa030b1be4c67e9c139a3e362cfba84452d20dfe09ec46c1",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/湖景村_grid.jpg",
+      "git_sha": "36d5d55101f8056bef1449efc8daffddc31b7f07"
+    },
+    {
+      "path": "maps/红教堂_grid.jpg",
+      "size_bytes": 120734,
+      "sha256": "d7feb8261a8510462749838338ad9e2de15f18f0a8866649b1ee99f5a1a84493",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/红教堂_grid.jpg",
+      "git_sha": "c2273c7dba2c1ec6da866f16f3cbeb38fd4a5ad6"
+    },
+    {
+      "path": "maps/里奥的回忆_grid.jpg",
+      "size_bytes": 323786,
+      "sha256": "7455fee37b5909f492e2ab1c7bee34744af6f9328ac95590b4df2db4fcd7eb96",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/maps/里奥的回忆_grid.jpg",
+      "git_sha": "3d921ce9223d9f8ab1e2302fc8880e05d3b9a65f"
+    },
+    {
+      "path": "seal.jpg",
+      "size_bytes": 55290,
+      "sha256": "f81ef929f3f7af225271182d650cba487d2d391059f469e9bcfaf5e8013bf480",
+      "image_type": "jpeg",
+      "header_hex": "ffd8ffe000104a46",
+      "source_path": "assets/seal.jpg",
+      "git_sha": "471d00fca2d7a771a101976bdc0813563a90e13c"
+    }
+  ]
+}

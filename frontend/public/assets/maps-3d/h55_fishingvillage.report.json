@@ -1,0 +1,59 @@
+{
+  "mapId": "h55_fishingvillage",
+  "nameZh": "湖景村",
+  "sourceFile": "h55_fishingvillage.runtime-f6039a3b992c0021.html",
+  "sourceHtmlBytes": 40745178,
+  "rawGlbBytes": 19500676,
+  "rawGlbGzipBytes": 10353945,
+  "optimizedGlbBytes": 2946952,
+  "optimizedGlbGzipBytes": 2091303,
+  "navGlbBytes": 79320,
+  "sizeReductionVsHtmlPct": 92.8,
+  "sizeReductionVsGlbPct": 84.9,
+  "gzipReductionVsGlbPct": 79.8,
+  "texBeforeBytes": 3399343,
+  "texAfterBytes": 201306,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 10,
+    "prop": 91,
+    "arch": 82
+  },
+  "before": {
+    "nodes": 3711,
+    "meshes": 184,
+    "materials": 225,
+    "textures": 55,
+    "uniqueVerts": 345210,
+    "uniqueTris": 203036,
+    "drawCalls": 3947,
+    "renderedTris": 1138849,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 118,
+    "meshes": 118,
+    "materials": 51,
+    "textures": 50,
+    "uniqueVerts": 177326,
+    "uniqueTris": 116931,
+    "drawCalls": 151,
+    "renderedTris": 749863,
+    "instancedNodes": 95
+  },
+  "drawCallReductionPct": 96.2,
+  "triReductionPct": 34.2,
+  "elapsedMs": 1438,
+  "webgl": {
+    "calls": 185,
+    "triangles": 770583,
+    "geometries": 150,
+    "textures": 51,
+    "size": [
+      6197,
+      854.5,
+      5684.6
+    ],
+    "errors": []
+  }
+}

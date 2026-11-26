@@ -1,0 +1,59 @@
+{
+  "mapId": "h55_chinatown",
+  "nameZh": "唐人街",
+  "sourceFile": "h55_chinatown.runtime-655aeebb137e322e.html",
+  "sourceHtmlBytes": 70614331,
+  "rawGlbBytes": 43118412,
+  "rawGlbGzipBytes": 20876236,
+  "optimizedGlbBytes": 7658284,
+  "optimizedGlbGzipBytes": 5175713,
+  "navGlbBytes": 43992,
+  "sizeReductionVsHtmlPct": 89.2,
+  "sizeReductionVsGlbPct": 82.2,
+  "gzipReductionVsGlbPct": 75.2,
+  "texBeforeBytes": 3560862,
+  "texAfterBytes": 252004,
+  "usesTexCoord1": false,
+  "tierCounts": {
+    "foliage": 25,
+    "prop": 362,
+    "arch": 88
+  },
+  "before": {
+    "nodes": 4136,
+    "meshes": 478,
+    "materials": 566,
+    "textures": 45,
+    "uniqueVerts": 934384,
+    "uniqueTris": 480895,
+    "drawCalls": 4400,
+    "renderedTris": 1584675,
+    "instancedNodes": 0
+  },
+  "after": {
+    "nodes": 220,
+    "meshes": 220,
+    "materials": 40,
+    "textures": 39,
+    "uniqueVerts": 635943,
+    "uniqueTris": 385235,
+    "drawCalls": 252,
+    "renderedTris": 1161055,
+    "instancedNodes": 201
+  },
+  "drawCallReductionPct": 94.3,
+  "triReductionPct": 26.7,
+  "elapsedMs": 2614,
+  "webgl": {
+    "calls": 321,
+    "triangles": 1390145,
+    "geometries": 251,
+    "textures": 40,
+    "size": [
+      2013.2,
+      420.6,
+      2368.2
+    ],
+    "errors": []
+  }
+}
