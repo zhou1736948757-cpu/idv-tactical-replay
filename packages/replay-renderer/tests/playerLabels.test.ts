@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { TacticalReplayRenderer, type CssRect, type TrajectorySampleTuple, type Vec3 } from '../src/index';
 import { MockCanvas2DContext, type RecordedCall } from './helpers/mockCanvas';
@@ -96,7 +96,18 @@ const screens = [[830.58, 648], [1346, 648], [873.2, 780], [1416, 780], [1167.6,
 const base = makePayload();
 type Actor = { uid: number; camp: 1 | 2; player_name: string; tuple: TrajectorySampleTuple; screen?: { x: number; y: number } };
 type Frame = { id: string; t: number; world: typeof base.world; players: Actor[] };
-const frames: Frame[] = JSON.parse(readFileSync(new URL('frames.json', art), 'utf8'));
+// Workflow/ is a local review-artifact directory, not part of a clean checkout.
+const frameFile = new URL('frames.json', art);
+const beforeFile = new URL('before.json', art);
+const fullScenesFile = new URL('full-scenes.json', art);
+const captureBase = process.env.T019_CAPTURE_BASE_MODULE;
+const replayCache = process.env.T019_REPLAY_CACHE;
+const captureAfter = process.env.T019_CAPTURE_AFTER;
+const frames: Frame[] | undefined = existsSync(frameFile) || captureBase || replayCache
+  ? JSON.parse(readFileSync(frameFile, 'utf8'))
+  : undefined;
+if (frames && frames.length !== 10) throw new Error('Expected ten T-019 frozen frames');
+const needsReplayEvidence = captureBase && replayCache;
 function actors(names = ['同名', '同名', '一位很长的中文全名测试', '猎', 'W']) {
   return names.map((player_name, i): Actor => ({ player_name, uid: [12, 2, 21, 7, 10][i], camp: i === 3 ? 1 : 2, tuple: [0, 0, 0, 0, 0, 1, 0, 0, i] }));
 }
@@ -134,7 +145,7 @@ function verify(rows: Paint[], names: string[], width: number, height: number, o
 
 type Snapshot = { width: number; height: number; t: number; match: string; models: Paint[]; uids: number[]; centers: number[][]; max: ReturnType<typeof maxima> };
 function chinatownSnapshot(Renderer = TacticalReplayRenderer): Snapshot[] {
-  const f = frames.find(f => f.t === 120)!;
+  const f = frames!.find(f => f.t === 120)!;
   return screens.map(([width, height]) => {
     const { ctx, r } = scene(f.players, width, height, 1, new Probe(), f.world, Renderer);
     r.fitToWorld();
@@ -190,7 +201,7 @@ type ReplayCheck = {
 function fullReplayChecks(cache: string, Legacy: typeof TacticalReplayRenderer): ReplayCheck[] {
   const checks: ReplayCheck[] = [];
   const payloads = new Map<string, typeof base>();
-  for (const f of frames) {
+  for (const f of frames!) {
     if (!payloads.has(f.id)) payloads.set(f.id, JSON.parse(readFileSync(join(cache, f.id, 'replay_2d.json'), 'utf8')));
     const payload = payloads.get(f.id)!;
     for (const [width, height] of screens) for (const dpr of [1, 2]) {
@@ -244,7 +255,10 @@ describe('player name paint geometry', () => {
     return { uid: 2, camp: 2, player_name: name, tuple: [0, x - width / 2, 0, y - height / 2, 1, 0, 0, null, 0] };
   }
   function capture(id: string, record: unknown) {
-    if (process.env.T019_CAPTURE_AFTER) writeFileSync(new URL(`repair-${id}.json`, art), JSON.stringify(record, null, 2));
+    if (captureAfter) {
+      mkdirSync(art, { recursive: true });
+      writeFileSync(new URL(`repair-${id}.json`, art), JSON.stringify(record, null, 2));
+    }
   }
   it('admits only painted player geometry at DPR 2, including attached pulse strokes', () => {
     const cases: [string, number, number, boolean][] = [
@@ -346,15 +360,14 @@ describe('player name paint geometry', () => {
     }
   });
 
-  it('checks the complete-scene replay evidence for every frozen time, board size and DPR', async () => {
-    const file = new URL('full-scenes.json', art);
-    if (process.env.T019_REPLAY_CACHE && process.env.T019_CAPTURE_BASE_MODULE) {
-      const legacy = await import(/* @vite-ignore */ process.env.T019_CAPTURE_BASE_MODULE);
-      const checks = fullReplayChecks(process.env.T019_REPLAY_CACHE, legacy.TacticalReplayRenderer);
-      writeFileSync(file, JSON.stringify(checks, null, 2));
+  it.skipIf(!frames || (!existsSync(fullScenesFile) && !needsReplayEvidence))('checks the complete-scene replay evidence for every frozen time, board size and DPR', async () => {
+    if (replayCache && captureBase) {
+      const legacy = await import(/* @vite-ignore */ captureBase);
+      const checks = fullReplayChecks(replayCache, legacy.TacticalReplayRenderer);
+      writeFileSync(fullScenesFile, JSON.stringify(checks, null, 2));
     }
-    const checks: ReplayCheck[] = JSON.parse(readFileSync(file, 'utf8'));
-    expect(checks).toHaveLength(frames.length * screens.length * 2);
+    const checks: ReplayCheck[] = JSON.parse(readFileSync(fullScenesFile, 'utf8'));
+    expect(checks).toHaveLength(frames!.length * screens.length * 2);
     for (const c of checks) {
       expect(c.protectedCount).toBeGreaterThanOrEqual(5);
       expect(c.drawn).toBe(c.uids.length);
@@ -369,15 +382,15 @@ describe('player name paint geometry', () => {
       expect(c.inkReserved).toBe(0);
     }
   });
-  it('reproduces the old Chinatown intersection and compares all five token centers on each board', async () => {
+  it.skipIf(!frames || (!existsSync(beforeFile) && !captureBase))('reproduces the old Chinatown intersection and compares all five token centers on each board', async () => {
     // Opt-in evidence capture uses a separate build of the unchanged base revision.
-    if (process.env.T019_CAPTURE_BASE_MODULE) {
-      const legacy = await import(/* @vite-ignore */ process.env.T019_CAPTURE_BASE_MODULE);
-      writeFileSync(new URL('before.json', art), JSON.stringify(chinatownSnapshot(legacy.TacticalReplayRenderer), null, 2));
+    if (captureBase) {
+      const legacy = await import(/* @vite-ignore */ captureBase);
+      writeFileSync(beforeFile, JSON.stringify(chinatownSnapshot(legacy.TacticalReplayRenderer), null, 2));
     }
-    const before: Snapshot[] = JSON.parse(readFileSync(new URL('before.json', art), 'utf8'));
+    const before: Snapshot[] = JSON.parse(readFileSync(beforeFile, 'utf8'));
     const after = chinatownSnapshot();
-    if (process.env.T019_CAPTURE_AFTER) writeFileSync(new URL('after.json', art), JSON.stringify(after, null, 2));
+    if (captureAfter) writeFileSync(new URL('after.json', art), JSON.stringify(after, null, 2));
     expect(before.length).toBe(screens.length);
     for (const [i, f] of before.entries()) {
       const a = f.models.find(p => p.text === '汽修二班秦晓萌')!, b = f.models.find(p => p.text === '泠泠莹心')!;
@@ -635,8 +648,24 @@ describe('player name paint geometry', () => {
     });
   }
 
-  for (const [w, h] of screens) it(`replays all ten frozen crowded frames at ${w}×${h}`, () => {
-    for (const f of frames) {
+  // Clean-checkout coverage: render a five-player cluster at each supported board size
+  // and pixel density, without needing local screenshots or player data.
+  for (const [w, h] of screens) it(`renders a crowded five-player board at ${w}×${h}`, () => {
+    for (const dpr of [1, 2]) {
+      const list = actors();
+      const { r, ctx, payload } = scene(list, w, h, dpr);
+      r.render(0);
+      const first = paints(ctx, dpr);
+      verify(first, list.map(a => a.player_name), w, h, []);
+      expect(r.getLabelDegradationCount()).toBe(0);
+      r.setPayload({ ...payload, players: [...payload.players].reverse() });
+      ctx.reset();
+      r.render(0);
+      expect(paints(ctx, dpr)).toEqual(first);
+    }
+  });
+  for (const [w, h] of screens) it.skipIf(!frames)(`replays all ten frozen crowded frames at ${w}×${h}`, () => {
+    for (const f of frames!) {
       const { r, ctx } = scene(f.players, w, h, 1, new Probe(), f.world);
       r.fitToWorld();
       r.render(f.t);
